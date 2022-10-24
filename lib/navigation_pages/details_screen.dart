@@ -67,7 +67,6 @@ class allCarDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cartController = Get.put(CartController());
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -122,37 +121,6 @@ class allCarDetail extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 20.0),
                       child: Hero(tag: model == 'null' ? 'n/a' : model, child: Image.network(imageurl == 'null' ? 'n/a' : imageurl, width: 300,)),
                     ),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment:CrossAxisAlignment.start,
-                    children: [
-                      Expanded(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment:CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding:const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10),
-                              child: Text(model == 'null' ? 'n/a' : model, style: MainHeading,textAlign: TextAlign.left,),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 8.0,),
-                              child: Text(
-                                brand == 'null' ? 'n/a' : brand,
-                                style:const TextStyle(fontSize: 20, ),textAlign: TextAlign.left,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      IconButton(
-                          padding: EdgeInsets.all(0),
-                          onPressed: (){
-                            cartController.addProduct(usar);
-                          },
-                          icon: const Icon(CommunityMaterialIcons.cart_plus, color:kPrimaryColor,size: 20,))
-                    ],
                   ),
                 ],
               ),
