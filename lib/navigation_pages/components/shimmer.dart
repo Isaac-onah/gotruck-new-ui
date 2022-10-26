@@ -74,7 +74,7 @@ class SpecificsCard extends StatelessWidget {
                   Container(
                     height: MediaQuery.of(context).size.height*0.07,
                     width: MediaQuery.of(context).size.width*0.12,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         color: kPrimaryColor,
                         borderRadius: BorderRadius.all(Radius.circular(5))),
                     child: Padding(
