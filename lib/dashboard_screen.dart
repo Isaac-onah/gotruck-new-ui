@@ -412,120 +412,120 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                 ));
                           }),
                     ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 10, horizontal: 7),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20)),
-                      child: TextButton(
-                          style: TextButton.styleFrom(
-                            primary: Colors.white,
-                            backgroundColor:
-                                kPrimaryLightColor.withOpacity(0.2),
-                            onSurface: Colors.grey,
-                            shape: RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.circular(12), // <-- Radius
-                            ),
-                          ),
-                          child: Padding(
-                            padding:
-                                const EdgeInsets.symmetric(horizontal: 8.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(30),
-                                  child: Container(
-                                    color: MyColors.grayBackground,
-                                    child: Image.asset(
-                                      "assets/llll.png",
-                                      height: 30,
-                                      width: 30,
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      "Go-Spare",
-                                      style: mServiceTitleStyle,
-                                    ),
-                                    Text(
-                                      "Spare Parts",
-                                      style: mServiceSubtitleStyle,
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                          onPressed: () {}),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 10, horizontal: 7),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20)),
-                      child: TextButton(
-                          style: TextButton.styleFrom(
-                            primary: Colors.white,
-                            backgroundColor:
-                                kPrimaryLightColor.withOpacity(0.2),
-                            onSurface: Colors.grey,
-                            shape: RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.circular(12), // <-- Radius
-                            ),
-                          ),
-                          child: Padding(
-                            padding:
-                                const EdgeInsets.symmetric(horizontal: 8.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(30),
-                                  child: Container(
-                                    color: MyColors.grayBackground,
-                                    child: Image.asset(
-                                      "assets/lil.png",
-                                      height: 30,
-                                      width: 30,
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Text(
-                                      "Go-Maintain",
-                                      style: mServiceTitleStyle,
-                                    ),
-                                    Text(
-                                      "Truck Maintenance",
-                                      style: mServiceSubtitleStyle,
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                          onPressed: () {
-
-                          }),
-                    ),
+                    // Container(
+                    //   padding: const EdgeInsets.symmetric(
+                    //       vertical: 10, horizontal: 7),
+                    //   decoration: BoxDecoration(
+                    //       borderRadius: BorderRadius.circular(20)),
+                    //   child: TextButton(
+                    //       style: TextButton.styleFrom(
+                    //         primary: Colors.white,
+                    //         backgroundColor:
+                    //             kPrimaryLightColor.withOpacity(0.2),
+                    //         onSurface: Colors.grey,
+                    //         shape: RoundedRectangleBorder(
+                    //           borderRadius:
+                    //               BorderRadius.circular(12), // <-- Radius
+                    //         ),
+                    //       ),
+                    //       child: Padding(
+                    //         padding:
+                    //             const EdgeInsets.symmetric(horizontal: 8.0),
+                    //         child: Row(
+                    //           mainAxisAlignment: MainAxisAlignment.center,
+                    //           crossAxisAlignment: CrossAxisAlignment.center,
+                    //           children: [
+                    //             ClipRRect(
+                    //               borderRadius: BorderRadius.circular(30),
+                    //               child: Container(
+                    //                 color: MyColors.grayBackground,
+                    //                 child: Image.asset(
+                    //                   "assets/llll.png",
+                    //                   height: 30,
+                    //                   width: 30,
+                    //                 ),
+                    //               ),
+                    //             ),
+                    //             const SizedBox(
+                    //               width: 10,
+                    //             ),
+                    //             Column(
+                    //               mainAxisAlignment: MainAxisAlignment.center,
+                    //               crossAxisAlignment: CrossAxisAlignment.center,
+                    //               children: [
+                    //                 Text(
+                    //                   "Go-Spare",
+                    //                   style: mServiceTitleStyle,
+                    //                 ),
+                    //                 Text(
+                    //                   "Spare Parts",
+                    //                   style: mServiceSubtitleStyle,
+                    //                 ),
+                    //               ],
+                    //             ),
+                    //           ],
+                    //         ),
+                    //       ),
+                    //       onPressed: () {}),
+                    // ),
+                    // Container(
+                    //   padding: const EdgeInsets.symmetric(
+                    //       vertical: 10, horizontal: 7),
+                    //   decoration: BoxDecoration(
+                    //       borderRadius: BorderRadius.circular(20)),
+                    //   child: TextButton(
+                    //       style: TextButton.styleFrom(
+                    //         primary: Colors.white,
+                    //         backgroundColor:
+                    //             kPrimaryLightColor.withOpacity(0.2),
+                    //         onSurface: Colors.grey,
+                    //         shape: RoundedRectangleBorder(
+                    //           borderRadius:
+                    //               BorderRadius.circular(12), // <-- Radius
+                    //         ),
+                    //       ),
+                    //       child: Padding(
+                    //         padding:
+                    //             const EdgeInsets.symmetric(horizontal: 8.0),
+                    //         child: Row(
+                    //           mainAxisAlignment: MainAxisAlignment.center,
+                    //           crossAxisAlignment: CrossAxisAlignment.center,
+                    //           children: [
+                    //             ClipRRect(
+                    //               borderRadius: BorderRadius.circular(30),
+                    //               child: Container(
+                    //                 color: MyColors.grayBackground,
+                    //                 child: Image.asset(
+                    //                   "assets/lil.png",
+                    //                   height: 30,
+                    //                   width: 30,
+                    //                 ),
+                    //               ),
+                    //             ),
+                    //             const SizedBox(
+                    //               width: 10,
+                    //             ),
+                    //             Column(
+                    //               mainAxisAlignment: MainAxisAlignment.center,
+                    //               crossAxisAlignment: CrossAxisAlignment.center,
+                    //               children: [
+                    //                 Text(
+                    //                   "Go-Maintain",
+                    //                   style: mServiceTitleStyle,
+                    //                 ),
+                    //                 Text(
+                    //                   "Truck Maintenance",
+                    //                   style: mServiceSubtitleStyle,
+                    //                 ),
+                    //               ],
+                    //             ),
+                    //           ],
+                    //         ),
+                    //       ),
+                    //       onPressed: () {
+                    //
+                    //       }),
+                    // ),
                   ],
                 ),
               ),

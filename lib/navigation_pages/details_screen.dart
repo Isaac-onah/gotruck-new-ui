@@ -72,7 +72,7 @@ class allCarDetail extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
-        foregroundColor:const Color(0xFF0FA958),
+        foregroundColor:kPrimaryColor,
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 0.0),

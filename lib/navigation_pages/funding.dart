@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:http/http.dart' as http;
+import 'package:newtruck/constants/constants.dart';
 import 'package:newtruck/models/apis.dart';
 import 'package:newtruck/models/invoice.dart';
-import 'package:newtruck/navigation_pages/all_car_details.dart';
 import 'package:newtruck/navigation_pages/components/pdf_api.dart';
 import 'package:newtruck/navigation_pages/components/pdf_invoice_api.dart';
+import 'package:newtruck/navigation_pages/details_screen.dart';
 
 import 'components/specific_card.dart';
 
@@ -34,13 +35,13 @@ class _truckFundState extends State<truckFund> {
   }
   generateInvoice() async {
     final date = DateTime.now();
-    final dueDate = date.add(Duration(days: 7));
+    final dueDate = date.add(const Duration(days: 7));
     String customername = nameperson;
     String customeremail = email;
     String aMOUNT = Amount;
 
     final invoice = Invoice(
-        supplier: Supplier(
+        supplier: const Supplier(
           name: 'Go-Truck',
           phone: "+2348038199515",
           address: '3 Nicole Balogun Street, Igbo Efon, Lekki Lagos.',
@@ -119,14 +120,14 @@ class _truckFundState extends State<truckFund> {
   }
   Widget BottomSheetExample() {
     return Container(
-      color: Color(0xff757575),
+      color: const Color(0xff757575),
       child: Container(
-        padding: EdgeInsets.all(20.0),
-        decoration: BoxDecoration(
+        padding: const EdgeInsets.all(20.0),
+        decoration: const BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(20.0),
-            topRight: Radius.circular(20.0),
+          borderRadius: const BorderRadius.only(
+            topLeft: const Radius.circular(20.0),
+            topRight: const Radius.circular(20.0),
           ),
         ),
         child: Column(
@@ -135,35 +136,35 @@ class _truckFundState extends State<truckFund> {
             Column(
               children: <Widget>[
                 Padding(
-                  padding: EdgeInsets.symmetric(vertical: 5),
+                  padding: const EdgeInsets.symmetric(vertical: 5),
                   child: TextFormField(
-                    cursorColor: Color(0xFF0FA958),
-                    style: TextStyle(
+                    cursorColor:kPrimaryColor,
+                    style: const TextStyle(
                         color: Colors.black87, fontFamily: 'SFUIDisplay'),
                     decoration: InputDecoration(
-                      focusedBorder: OutlineInputBorder(
+                      focusedBorder: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(10.0)),
                         borderSide: BorderSide(
-                          color: Colors.lightGreen,
+                          color: primaryColor,
                         ),
                       ),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8),
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                             width: 1,
                             style: BorderStyle.solid,
-                            color: Color(0xFF0FA958)),
+                            color: kPrimaryColor),
                       ),
                       fillColor: Colors.grey.shade200,
                       filled: true,
                       labelText: 'Full name',
-                      prefixIcon: Icon(
+                      prefixIcon: const Icon(
                         Icons.account_circle,
-                        color: Color(0xFF0FA958),
+                        color: kPrimaryColor,
                       ),
                       labelStyle: GoogleFonts.poppins(
-                        textStyle: TextStyle(
-                          color: Color(0xFF0FA958),
+                        textStyle: const TextStyle(
+                          color: kPrimaryColor,
                           fontWeight: FontWeight.normal,
                           fontSize: 12,
                         ),
@@ -176,35 +177,35 @@ class _truckFundState extends State<truckFund> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(vertical: 5),
+                  padding: const EdgeInsets.symmetric(vertical: 5),
                   child: TextFormField(
-                    cursorColor: Color(0xFF0FA958),
-                    style: TextStyle(
+                    cursorColor: kPrimaryColor,
+                    style: const TextStyle(
                         color: Colors.black87, fontFamily: 'SFUIDisplay'),
                     decoration: InputDecoration(
-                      focusedBorder: OutlineInputBorder(
+                      focusedBorder: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(10.0)),
                         borderSide: BorderSide(
-                          color: Colors.lightGreen,
+                          color:primaryColor,
                         ),
                       ),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8),
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                             width: 1,
                             style: BorderStyle.solid,
-                            color: Color(0xFF0FA958)),
+                            color:kPrimaryColor),
                       ),
                       fillColor: Colors.grey.shade200,
                       filled: true,
                       labelText: 'Email Address',
-                      prefixIcon: Icon(
+                      prefixIcon: const Icon(
                         Icons.mail,
-                        color: Color(0xFF0FA958),
+                        color: kPrimaryColor,
                       ),
                       labelStyle: GoogleFonts.poppins(
-                        textStyle: TextStyle(
-                          color: Color(0xFF0FA958),
+                        textStyle: const TextStyle(
+                          color: kPrimaryColor,
                           fontWeight: FontWeight.normal,
                           fontSize: 12,
                         ),
@@ -217,36 +218,36 @@ class _truckFundState extends State<truckFund> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(vertical: 5),
+                  padding: const EdgeInsets.symmetric(vertical: 5),
                   child: TextFormField(
-                    cursorColor: Color(0xFF0FA958),
+                    cursorColor: kPrimaryColor,
                     keyboardType: TextInputType.number,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Colors.black87, fontFamily: 'SFUIDisplay'),
                     decoration: InputDecoration(
-                      focusedBorder: OutlineInputBorder(
+                      focusedBorder: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(10.0)),
                         borderSide: BorderSide(
-                          color: Colors.lightGreen,
+                          color:primaryColor,
                         ),
                       ),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8),
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                             width: 1,
                             style: BorderStyle.solid,
-                            color: Color(0xFF0FA958)),
+                            color: kPrimaryColor),
                       ),
                       fillColor: Colors.grey.shade200,
                       filled: true,
                       labelText: 'Amount',
-                      prefixIcon: Icon(
+                      prefixIcon: const Icon(
                         Icons.monetization_on,
-                        color: Color(0xFF0FA958),
+                        color: kPrimaryColor,
                       ),
                       labelStyle: GoogleFonts.poppins(
-                        textStyle: TextStyle(
-                          color: Color(0xFF0FA958),
+                        textStyle: const TextStyle(
+                          color: kPrimaryColor,
                           fontWeight: FontWeight.normal,
                           fontSize: 12,
                         ),
@@ -261,11 +262,11 @@ class _truckFundState extends State<truckFund> {
               ],
             ),
             FlatButton(
-              child: Text(
+              child: const Text(
                 'Submit',
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
               ),
-              color: Color(0xFF0FA958),
+              color: kPrimaryColor,
               onPressed: () {
 
 
@@ -294,8 +295,8 @@ class _truckFundState extends State<truckFund> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
-        foregroundColor: Color(0xFF0FA958),
-        title: Center(child: Text("Go-Funding")),
+        foregroundColor:kPrimaryColor,
+        title: const Center(child: Text("Go-Funding")),
       ),
       body: Padding(
           padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.01),
@@ -305,8 +306,8 @@ class _truckFundState extends State<truckFund> {
             child: Container(
               height: MediaQuery.of(context).size.width * 0.01,
               width: MediaQuery.of(context).size.width * 0.01,
-              decoration: BoxDecoration(
-                  image: DecorationImage(
+              decoration: const BoxDecoration(
+                  image: const DecorationImage(
                     image: AssetImage('asset/yui.png'),
                     fit: BoxFit.fill,
                   )),
@@ -366,7 +367,7 @@ class _truckFundState extends State<truckFund> {
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(20),
                                 boxShadow: [
-                                  BoxShadow(
+                                  const BoxShadow(
                                       color: Colors.black12,
                                       spreadRadius: 0.5,
                                       blurRadius: 15)
@@ -480,7 +481,7 @@ class _truckFundState extends State<truckFund> {
                                           0.03),
                                       child: Text(
                                           '${usar.price == 'null' ? 'n/a' : formatCurrency.format(double.parse((usar.price).toString()))}',
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                               color: Colors.black87,
                                               fontSize: 14,
                                               fontWeight:
@@ -507,22 +508,22 @@ class _truckFundState extends State<truckFund> {
                                         );
                                       },
                                       child: Padding(
-                                        padding: EdgeInsets.symmetric(horizontal: 8.0),
+                                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
                                         child: Text(
                                           "Show Interest",
                                           style: GoogleFonts.montserrat(
                                               fontWeight:
                                               FontWeight.w400,
-                                              fontSize: 13),
+                                              fontSize: 13, color: Colors.white),
                                         ),
                                       ),
                                       style: ElevatedButton.styleFrom(
-                                        primary: Color(0xFF0FA958),
+                                        primary: kPrimaryColor,
                                         elevation: 0,
                                         shape:
                                         new RoundedRectangleBorder(
                                           borderRadius:
-                                          BorderRadius.only(
+                                          const BorderRadius.only(
                                               topLeft: Radius
                                                   .circular(20),
                                               bottomLeft:
@@ -573,14 +574,14 @@ class CustomDialog extends StatelessWidget {
     return Stack(
       children: <Widget>[
         Container(
-          padding: EdgeInsets.all(16),
-          margin: EdgeInsets.only(top: 16),
+          padding: const EdgeInsets.all(16),
+          margin: const EdgeInsets.only(top: 16),
           decoration: BoxDecoration(
               color: Colors.white,
               shape: BoxShape.rectangle,
               borderRadius: BorderRadius.circular(17),
               boxShadow: [
-                BoxShadow(
+                const BoxShadow(
                     color: Colors.black26,
                     blurRadius: 10.0,
                     offset: Offset(0.0, 10.0))
@@ -592,33 +593,33 @@ class CustomDialog extends StatelessWidget {
                 title,
                 style: GoogleFonts.poppins(
                   textStyle: TextStyle(
-                    color: title == 'Successful!' ? Colors.green : Colors.red,
+                    color: title == 'Successful!' ? kPrimaryColor : Colors.red,
                     fontWeight: FontWeight.w700,
                     fontSize: 18,
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16.0,
               ),
               Text(
                 description,
                 style: GoogleFonts.poppins(
-                  textStyle: TextStyle(
+                  textStyle: const TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.normal,
                     fontSize: 15,
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 24.0,
               ),
               Align(
                   alignment: Alignment.bottomRight,
                   child: MaterialButton(
                       onPressed: onPressed,
-                      color: Color(0xff0095FF),
+                      color: const Color(0xff0095FF),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(50)),
                       child: Padding(
@@ -626,7 +627,7 @@ class CustomDialog extends StatelessWidget {
                         child: Text(
                           "Get Invoice",
                           style: GoogleFonts.pacifico(
-                            textStyle: TextStyle(
+                            textStyle: const TextStyle(
                                 color: Colors.white, letterSpacing: .5),
                           ),
                         ),

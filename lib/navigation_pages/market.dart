@@ -179,7 +179,8 @@ class _marketScreenState extends State<marketScreen> {
                           onTap: () {
                              Navigator.push(
                                 context,MaterialPageRoute(
-                              builder: (context) => allCarDetail(
+                              builder: (context) =>
+                                  allCarDetail(
                                 year: usar.year,
                                 brand: usar.brand,
                                 model: usar.model,
