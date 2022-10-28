@@ -283,6 +283,52 @@ print(controller.products);
                     },
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 5),
+                  child: TextFormField(
+                    cursorColor: kPrimaryColor,
+                    style: const TextStyle(
+                        color: Colors.black87, fontFamily: 'SFUIDisplay'),
+                    decoration: InputDecoration(
+                      focusedBorder: const OutlineInputBorder(
+                        borderRadius: const BorderRadius.all(const Radius.circular(10.0)),
+                        borderSide: BorderSide(
+                          color: kPrimaryColor,
+                        ),
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                        borderSide: const BorderSide(
+                            width: 1,
+                            style: BorderStyle.solid,
+                            color: kPrimaryColor),
+                      ),
+                      fillColor: Colors.grey.shade200,
+                      filled: true,
+                      labelText: 'Address',
+                      prefixIcon: const Icon(
+                        Icons.location_on_rounded,
+                        color: kPrimaryColor,
+                      ),
+                      labelStyle: GoogleFonts.poppins(
+                        textStyle: const TextStyle(
+                          color: kPrimaryColor,
+                          fontWeight: FontWeight.normal,
+                          fontSize: 12,
+                        ),
+                      ),
+                    ),
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter some text';
+                      }
+                      return null;
+                    },
+                    onSaved: (String? val) {
+                      phone = val!;
+                    },
+                  ),
+                ),
               ],
             ),
             FlatButton(
