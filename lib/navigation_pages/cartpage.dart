@@ -27,7 +27,7 @@ class _CartScreenState extends State<CartScreen> {
   GlobalKey<FormState> _key = new GlobalKey<FormState>();
   final CartController controller = Get.find();
 
-  late String email, phone, nameperson;
+  late String email, phone, nameperson, address;
   bool _validate = false;
   void submitComplaint(double total) async {
     try {
@@ -95,6 +95,7 @@ print(controller.products);
     String customername = nameperson;
     String customeremail = email;
     String phones = phone;
+    String adress = address;
 
     final invoice = Invoice(
         supplier: const Supplier(
@@ -104,7 +105,7 @@ print(controller.products);
           paymentInfo: '1024347328',
         ),
         customer: Customer(
-            name: customername, email: customeremail, phone: phones),
+            name: customername, email: customeremail, phone: phones, address: adress),
         info: InvoiceInfo(
           date: date,
           dueDate: dueDate,
@@ -325,7 +326,7 @@ print(controller.products);
                       return null;
                     },
                     onSaved: (String? val) {
-                      phone = val!;
+                      address = val!;
                     },
                   ),
                 ),

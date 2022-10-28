@@ -64,11 +64,13 @@ class Customer {
   final String name;
   final String phone;
   final String email;
+  final String address;
 
   const Customer({
     required this.name,
     required this.email,
     required this.phone,
+    required this.address,
   });
 }
 class Total {

@@ -24,7 +24,7 @@ class _truckFundState extends State<truckFund> {
   late List<trucksfrom> _users;
   List<trucksfrom> filterUsers = [];
   late bool _loading;
-  late String email, Amount, nameperson;
+  late String email, Amount, nameperson, address;
   bool _validate = false;
 
   @override
@@ -39,6 +39,7 @@ class _truckFundState extends State<truckFund> {
     String customername = nameperson;
     String customeremail = email;
     String aMOUNT = Amount;
+    String adress = address;
 
     final invoice = Invoice(
         supplier: const Supplier(
@@ -48,7 +49,7 @@ class _truckFundState extends State<truckFund> {
           paymentInfo: '1024347328',
         ),
         customer: Customer(
-            name: customername, email: customeremail, phone: aMOUNT),
+            name: customername, email: customeremail, phone: aMOUNT, address: address),
         info: InvoiceInfo(
           date: date,
           dueDate: dueDate,
@@ -256,6 +257,48 @@ class _truckFundState extends State<truckFund> {
                     validator: validateDetails,
                     onSaved: (String? val) {
                       Amount = val!;
+                    },
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 5),
+                  child: TextFormField(
+                    cursorColor: kPrimaryColor,
+                    keyboardType: TextInputType.number,
+                    style: const TextStyle(
+                        color: Colors.black87, fontFamily: 'SFUIDisplay'),
+                    decoration: InputDecoration(
+                      focusedBorder: const OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                        borderSide: BorderSide(
+                          color:primaryColor,
+                        ),
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                        borderSide: const BorderSide(
+                            width: 1,
+                            style: BorderStyle.solid,
+                            color: kPrimaryColor),
+                      ),
+                      fillColor: Colors.grey.shade200,
+                      filled: true,
+                      labelText: 'Address',
+                      prefixIcon: const Icon(
+                        Icons.monetization_on,
+                        color: kPrimaryColor,
+                      ),
+                      labelStyle: GoogleFonts.poppins(
+                        textStyle: const TextStyle(
+                          color: kPrimaryColor,
+                          fontWeight: FontWeight.normal,
+                          fontSize: 12,
+                        ),
+                      ),
+                    ),
+                    validator: validateDetails,
+                    onSaved: (String? val) {
+                      address = val!;
                     },
                   ),
                 ),
