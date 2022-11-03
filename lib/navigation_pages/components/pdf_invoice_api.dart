@@ -11,7 +11,6 @@ import 'package:pdf/widgets.dart';
 class PdfInvoiceApi {
 
 
-
   static Future<File> generate(Invoice invoice) async {
     final pdf = Document();
     final imageJpg = (await rootBundle.load('assets/shimmer.png')).buffer.asUint8List();
@@ -101,6 +100,7 @@ class PdfInvoiceApi {
           Text(customer.name, style: TextStyle(fontWeight: FontWeight.bold)),
           Text(customer.phone),
           Text(customer.email),
+          Text(customer.address),
         ],
       );
 
