@@ -86,24 +86,24 @@ class _DashboardScreenState extends State<DashboardScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: 10,
+              height: size.height/60,
             ),
             Padding(
               padding:
-                  const EdgeInsets.symmetric(vertical: 18.0, horizontal: 10),
+                  EdgeInsets.symmetric(vertical: size.width/18.0, horizontal: size.width/30),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 10.0),
+                    padding: EdgeInsets.only(left: size.width/35),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(30),
                       child: Container(
                         color: MyColors.grayBackground,
                         child: Image.asset(
                           "assets/playstore.png",
-                          height: 40,
-                          width: 40,
+                          height:size.width/9,
+                          width: size.width/9,
                         ),
                       ),
                     ),
@@ -171,6 +171,29 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 ],
               ),
             ),
+            Container(
+                padding: EdgeInsets.symmetric(horizontal: size.width/20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text(
+                      'Go-Services',
+                      style: GoogleFonts.poppins(
+                        color: Colors.black87,
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                    Expanded(
+                      child: Divider(
+                        thickness: 0.5,
+                        color: Colors.black,
+                        indent: 32,
+                        endIndent: 15,
+                      ),
+                    ),
+                  ],
+                )),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: SizedBox(
@@ -548,15 +571,13 @@ class _DashboardScreenState extends State<DashboardScreen> {
               height: 10,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: RichText(
-                textAlign: TextAlign.start,
-                text: const TextSpan(
-                    text: "Go Featured",
-                    style: TextStyle(
-                        color: Colors.black87,
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold)),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child:Text("Go Featured",
+                  style: GoogleFonts.poppins(
+                    color: Colors.black87,
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.w400,
+                  ),
               ),
             ),
             const SizedBox(
