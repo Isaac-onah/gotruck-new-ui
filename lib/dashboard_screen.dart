@@ -92,8 +92,22 @@ class _DashboardScreenState extends State<DashboardScreen> {
               padding:
                   const EdgeInsets.symmetric(vertical: 18.0, horizontal: 10),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10.0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(30),
+                      child: Container(
+                        color: MyColors.grayBackground,
+                        child: Image.asset(
+                          "assets/playstore.png",
+                          height: 40,
+                          width: 40,
+                        ),
+                      ),
+                    ),
+                  ),
                   InkWell(
                     onTap: () {
                       Navigator.push(
@@ -127,21 +141,21 @@ class _DashboardScreenState extends State<DashboardScreen> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Text(
-                "Hello!",
+                "Hello! Welcome to Gotruck",
                 style: GoogleFonts.poppins(
                   color: Colors.black87,
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.normal,
+                  fontSize: 21.0,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Text(
-                "Welcome to Gotruck",
+                "What do you want to do today?",
                 style: GoogleFonts.poppins(
                   color: Colors.black87,
-                  fontSize: 20.0,
+                  fontSize: 14.0,
                   fontWeight: FontWeight.normal,
                 ),
               ),

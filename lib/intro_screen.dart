@@ -76,18 +76,6 @@ class _IntroScreenState extends State<IntroScreen> with SingleTickerProviderStat
               ),
             ),
             Align(
-              alignment: Alignment.topCenter,
-              child: Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 50, vertical: 50),
-                width: size.width,
-                child: Image.asset(
-                  "assets/img_shoes.png",
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-            Align(
               alignment: Alignment.bottomCenter,
               child: Container(
                 padding: const EdgeInsets.only(top: 40),
@@ -101,15 +89,7 @@ class _IntroScreenState extends State<IntroScreen> with SingleTickerProviderStat
                         fit: BoxFit.cover,
                       ),
                     ),
-                    // const SizedBox(height: 20,),
-                    // RichText(
-                    //   textAlign: TextAlign.center,
-                    //   text: const TextSpan(
-                    //       text: "Smart, gorgeous & fashionable\ncollection makes you cool",
-                    //       style: TextStyle(
-                    //           color: Colors.white,
-                    //           fontSize: 14)),
-                    // ),
+
                     const Spacer(),
                     GestureDetector(
                       behavior: HitTestBehavior.translucent,
